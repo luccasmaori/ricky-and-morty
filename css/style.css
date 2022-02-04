@@ -1,0 +1,314 @@
+/* define propriedades para todos elementos do html */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+/* background do corpo da página */
+body {
+    background-color: #0e0e0e;
+}
+
+/* cabeçalho da página */
+.cabecalho {
+    background:
+        /* gradiente semi-transparente para escurecer a imagem */ 
+        linear-gradient(
+          rgba(0, 0, 0, 0.300), 
+          rgba(0, 0, 0, 0.300)
+        ),
+        /* imagem do espaço */
+        url("../img/bg-cabecalho.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cabecalho h1 {
+    font-size: 3.7rem;
+    margin: 10px;
+    color: rgb(5, 207, 207);
+    text-shadow: 0 0 5px #05a00d;
+}
+
+.cabecalho h6 {
+    font-size: 1.5rem;
+    margin: 10px;
+    color: rgb(5, 207, 207);
+    text-shadow: 0 0 5px #05a00d;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    margin-top: 40px;
+    background-color: rgb(5, 160, 207);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(3, 101, 131);
+    border-radius: 8px;
+    box-shadow: 0 0 5px #05a00d;
+    width: 120px;
+    height: 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 4px #05a00d;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cabecalho a:active {
+    background-color: rgb(5, 133, 172);
+    box-shadow: 0 0 6px #ffffff;
+}
+
+
+/* seção sobre da página */
+.container-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.container-sobre .sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.container-sobre .sobre h2 {
+    text-shadow: 0 0 1px #05a00d;
+    color: #54198c;
+    font-size: 2rem;
+}
+
+.container-sobre .sobre img {
+    margin: 20px 0;
+    width: 250px;
+    height: auto;
+}
+
+.container-sobre .sobre p {
+    text-shadow: 0 0 1px #05a00d;
+    color: #54198c;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 10px 0;
+    text-align: center;
+    max-width: 700px;
+}
+
+
+/* paginação superior da aplicação */
+.container-paginacao-superior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* paginação inferior da aplicação */
+.container-paginacao-inferior {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* estilo da paginação */
+.paginacao {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.paginacao li {display: inline;}
+
+.paginacao li a {
+    font-size: 1.3rem;
+    color: rgb(5, 133, 172);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-shadow: 2px 1px 5px rgb(5, 133, 172);
+    cursor: pointer;
+}
+
+.paginacao li a:hover{
+    color: rgb(2, 79, 102);
+    text-shadow: none;
+}
+
+.paginacao li a.active {
+    color: rgb(255, 255, 255);
+}
+
+.paginacao li a::selection {
+    background-color: #0e0e0e;
+}
+
+/* estilo do contador de páginas */
+.contador {
+    font-size: 1.3rem;
+    color: rgb(5, 133, 172);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-shadow: 2px 1px 5px rgb(5, 133, 172);
+}
+
+.contador::selection {
+    background-color: #0e0e0e;
+}
+
+
+/* aplicação */
+.container-aplicacao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-aplicacao .card {
+    color: rgb(255, 255, 255);
+    display: flex;
+    height: 260px;
+    min-width: 600px;
+    margin: 20px;
+    align-items: center;
+    line-height: 1.3;
+    border-radius: 10px;
+    background-color: rgb(32, 32, 32);
+    box-shadow: 8px 3px 15px rgb(5, 133, 172);
+}
+
+.container-aplicacao .card .nome {
+    font-size: 1.3rem;
+    color: rgb(5, 207, 207);
+}
+
+#titulos {
+    display: inline-block;
+    margin-top: 10px;
+    color: rgb(178, 179, 178);
+}
+
+.container-aplicacao .card img {
+    margin: 5px  10px 0 0;
+    width: 250px;
+    height: 260px;
+    border-radius: 10px 0 0 10px ;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+    color: rgb(255, 255, 255);
+}
+
+/* media query (adaptação do layout para determinados tamanhos de telas) */
+@media screen and (max-width: 700px) {
+
+    /* cabecalho */
+    .cabecalho h1 {
+        font-size: 2rem;
+
+    }
+    
+    .cabecalho h6 {
+        font-size: 0.9rem;
+    }
+    
+    .cabecalho a {
+        margin-top: 40px;
+        width: 90px;
+        height: 28px;
+        font-size: 0.9rem;
+    }
+
+    /* seção sobre da página */
+    .container-sobre .sobre p {
+        font-size: 0.9rem;
+        max-width: 380;
+        margin: 0 5px;
+    }
+
+    /* aplicação */
+    .container-aplicacao .card {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 390px;
+        min-width: 300px;
+        margin: 20px;
+        line-height: 1.3;
+        font-size: 0.8rem;
+    }
+    
+    .container-aplicacao .card .nome {
+        font-size: 0.8rem;
+    }
+
+    .container-aplicacao .card i, span, p, strong {
+        padding-left: 10px;
+    }
+    
+    .container-aplicacao .card img {
+        margin: 0 0 5px 0;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px 10px 0 0px ;
+    }
+}
+
+/* media query (adaptação do layout para determinados tamanhos de telas) */
+@media screen and (max-width: 400px) {
+    
+    /* estilo da paginação */
+    .paginacao li a {
+        font-size: 0.9rem;
+    }
+    
+    /* estilo do contador */
+    .contador {
+        font-size: 0.9rem;
+    }
+
+    /* aplicação */
+    .container-aplicacao .card {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 350px;
+        min-width: 200px;
+        margin: 20px;
+        line-height: 1.3;
+        font-size: 0.6rem;
+    }
+    
+    .container-aplicacao .card .nome {
+        font-size: 0.55rem;
+    }
+
+    .container-aplicacao .card i, span, p, strong {
+        padding-left: 10px;
+    }
+    
+    .container-aplicacao .card img {
+        margin: 0 0 5px 0;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px 10px 0 0px ;
+    }
+}
+
